@@ -1,206 +1,82 @@
-/* Global styles */
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+/* Configurações Gerais */
+:root {
+    --bg-color: #222222;
+    --card-bg: #2a2a2a;
+    --accent: #007bff; /* Seu azul */
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
 }
 
 body {
-   font-family: "Helvetica Neue", sans-serif;
-   font-size: 1rem;
-   line-height: 1.5;
-   color: #333;
-  background-color: #4C5255;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    margin: 0;
 }
 
-.container {
-   max-width: 1100px;
-   margin: 0 auto;
-   padding: 0 30px;
-}
-
-/* Header styles */
-header {
-   position: sticky;
-   top: 0;
-   z-index: 999;
-   background: #fff;
-   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-}
-
+/* Navbar */
 .navbar {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   height: 70px;
-  background-color: #404141;
-}
-
-.navbar__logo {
-   display: flex;
-   align-items: center;
-   font-size: 2rem;
-   font-weight: bold;
+    background: #1a1a1a;
+    border-bottom: 2px solid var(--accent);
+    padding: 1rem 5%;
 }
 
 .navbar__logo i {
-   font-size: 2rem;
-   color: #00bfff;
-   margin-right: 6px;
+    color: var(--accent);
 }
 
-.navbar__menu {
-   display: flex;
+/* Seções e Containers */
+section {
+    padding: 50px 20px;
 }
 
-.navbar__menu li {
-   list-style: none;
-   margin-right: 20px;
+.container {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid #333;
 }
 
-.navbar__menu a {
-   color: #333;
-   text-decoration: none;
-   font-size: 1.125rem;
-   font-weight: bold;
-   transition: all 0.3s ease;
-   padding: 10px;
-   border-radius: 5px;
-}
-
-
-.navbar__menu a:hover {
-   background-color: gray
-}
-#ddd;
-}
-
-/* About section styles */
-#about {
-padding: 100px 0;
-background-image: url(images/doge-pattern.png);
-background-size: cover;
-}
-
-#about h1 {
-font-size: 3rem;
-font-weight: bold;
-margin-bottom: 30px;
-text-align: center;
-color: white;
-}
-
-#about p {
-font-size: 1.5rem;
-margin-bottom: 30px;
-text-align: center;
-color: white;
+/* Títulos e Textos */
+h1, h2, h3 {
+    color: var(--text-primary);
 }
 
 p {
-font-size: 1.5rem;
-margin-bottom: 30px;
-text-align: center;
-color: white;
+    color: var(--text-secondary);
 }
 
-.about__button {
-display: block;
-width: 300px;
-max-width: 100%;
-margin: 0 auto;
-background: #00bfff;
-color: #fff;
-text-align: center;
-text-decoration: none;
-font-size: 1.125rem;
-font-weight: bold;
-padding: 10px 20px;
-border-radius: 5px;
-transition: all 0.3s ease;
+/* Botões Customizados */
+.btn-primary, .download__button {
+    background-color: var(--accent) !important;
+    color: white !important;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.about__button:hover {
-background: #0080ff;
-}
-.about__button p {
-color: white;
-}
-
-/* Download section styles */
-#download {
-padding: 100px 0;
-background-color: #484D4F;
+.btn-primary:hover, .download__button:hover {
+    background-color: #0056b3 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
 }
 
-#download h1 {
-font-size: 3rem;
-font-weight: bold;
-margin-bottom: 30px;
-text-align: center;
-color: white;
-}
-
-.download__button {
-display: block;
-width: auto;
-max-width: 100%;
-margin: 0 auto;
-background-color: #333;
-color: #fff;
-text-align: center;
-text-decoration: none;
-font-size: 1.125rem;
-font-weight: bold;
-padding: 10px 20px;
-border: 2px solid #333;
-border-radius: 5px;
-transition: all 0.3s ease;
-}
-
-.download__button:hover {
-background-color: #fff;
-color: #333;
-}
-
-.download__button i {
-margin-right: 6px;
-}
-
-/* Footer section styles */
+/* Footer */
 footer {
-background-color: #333;
-color: #fff;
-padding: 60px 0;
-}
-
-.footer__menu {
-display: flex;
-justify-content: center;
-margin-bottom: 30px;
-}
-
-.footer__menu li {
-list-style: none;
-margin-right: 20px;
+    background: #111;
+    border-top: 1px solid #333;
+    padding: 20px;
+    text-align: center;
 }
 
 .footer__menu a {
-color: #fff;
-text-decoration: none;
-font-size: 1.125rem;
-font-weight: bold;
-transition: all 0.3s ease;
-padding: 10px;
-border-radius: 5px;
-}
-
-.footer__menu a:hover {
-background-color: #ddd;
-}
-
-.footer__text {
-text-align: center;
-font-size: 1.125rem;
-font-weight: bold;
+    color: var(--accent);
+    text-decoration: none;
+    margin: 0 10px;
 }
