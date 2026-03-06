@@ -1,59 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
    <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Home | Doge Unblocker</title>
-<link rel="icon" href="icon.jpg">
-      <!-- Fontawesome icons CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-sP4v5EApBYJiK50X248YiJinH0W3kKUmuC9uA75Jyq/0c0vXy+oJd0V1OwTHPFXN/Ze4KdWp/gLRRWdXvJkHFQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <!-- Custom CSS -->
+      <title>Home | ClassHub</title>
+      <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2991/2991165.png">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
       <link rel="stylesheet" href="styles.css" />
+      <style>
+         /* Sobreescrevendo o CSS para o seu estilo Azul Tech */
+         body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
+         .navbar { background: #1e293b; border-bottom: 2px solid #007bff; }
+         .navbar__logo i { color: #007bff; margin-right: 10px; }
+         section { padding: 60px 20px; text-align: center; }
+         .container { max-width: 800px; margin: auto; }
+         h1 { color: #fff; font-size: 3rem; margin-bottom: 20px; }
+         p { color: #94a3b8; font-size: 1.2rem; line-height: 1.6; }
+         
+         /* Botão Estilizado */
+         .btn-primary {
+            background: #007bff;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin-top: 30px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+         }
+         .btn-primary:hover { background: #0056b3; transform: translateY(-2px); }
+         footer { background: #1e293b; padding: 20px; border-top: 1px solid #334155; }
+      </style>
    </head>
    <body>
-      <!-- Header Section -->
       <header>
-         <nav class="navbar">
-            <div class="navbar__logo">
-               <i class="fab fa-dogecoin"></i>
-               <h2 style="color:#fff;font-size:27px;"><img src="icon.jpg" style="width:22px;height:22px;margin-left:5px;"></img> Doge Network</h2>
+         <nav class="navbar" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 5%;">
+            <div class="navbar__logo" style="display: flex; align-items: center;">
+               <i class="fas fa-shield-alt"></i> <h2 style="color:#fff; font-size:24px; margin:0;">ClassHub Network</h2>
             </div>
-            <ul class="navbar__menu">
-               <li><a href="#about" style="color:white;">About</a></li>
-<li><a href="#download" style="color:white;">Setup</a></li>
-               <li><a href="https://github.com/dogenetwork/doge-unblocker" style="color:white;">GitHub</a></li>
-<li><a href="https://discord.gg/sWPHCdxCPU" style="color:white;">Discord</a></li>
+            <ul class="navbar__menu" style="list-style: none; display: flex; gap: 20px;">
+               <li><a href="#about" style="color:white; text-decoration:none;">Sobre</a></li>
+               <li><a href="#tools" style="color:white; text-decoration:none;">Ferramentas</a></li>
             </ul>
          </nav>
       </header>
-      <!-- About Section -->
+
       <section id="about">
          <div class="container">
-            <h1 style="padding:40px;font-size:40px;margin:0.5px;">About Us</h1>
-            <p>Doge Network is the creator of Doge Unblocker, which is a lighting-fast proxy service built for school. Our services are fast, reliable, and completely free.</p>
-<div style="justify-content:center;display:flex;">
-<a href="https://discord.gg/sWPHCdxCPU" style="text-decoration:none;align-items:center;padding:5px;"><button class="download__button">Discord</button></a> 
-<a href="https://github.com/dogenetwork/doge-unblocker" style="text-decoration:none;padding:5px;"><button class="download__button">GitHub</button></a>
-</div>
+            <h1>Pesquisa Sem Limites.</h1>
+            <p>O ClassHub é uma plataforma de produtividade acadêmica desenvolvida para garantir que estudantes tenham acesso rápido a fontes de informação globais, sem interrupções ou filtros de rede.</p>
+            
+            <a href="/prox.html" class="btn-primary">Abrir Navegador Acadêmico</a>
+         </div>
+      </section>
 
-<br>
-         </div>
-      </section>
-      <!-- Download Section -->
-      <section id="download">
+      <section id="tools" style="background: #111827;">
          <div class="container">
-            <h1 style="font-size:40px;">How do I use this?</h1>
-            <p>To get started, simply join our official Discord community and utilize our bot by typing “!getlink” to receive a free proxy link. We also offer tutorials on how to create your own Doge Unlocker link in our Discord. More information can be found on our official <a href="https://github.com/dogenetwork/doge-unblocker" style="color:#fff;">GitHub repository.</a></p>
+            <h2 style="font-size:32px;">Por que usar o ClassHub?</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px;">
+               <div style="background:#1e293b; padding:20px; border-radius:10px;">
+                  <i class="fas fa-bolt" style="color:#007bff; font-size:24px;"></i>
+                  <h3>Velocidade</h3>
+                  <p>Otimizado para conexões escolares instáveis.</p>
+               </div>
+               <div style="background:#1e293b; padding:20px; border-radius:10px;">
+                  <i class="fas fa-user-secret" style="color:#007bff; font-size:24px;"></i>
+                  <h3>Privacidade</h3>
+                  <p>Suas pesquisas não ficam salvas no histórico da rede.</p>
+               </div>
+            </div>
          </div>
       </section>
-      <!-- Footer Section -->
+
       <footer>
-         <div class="container">
-            <ul class="footer__menu">
-               <li><a href="https://github.com/dogenetwork/doge-unblocker">GitHub</a></li>
-               <li><a href="https://discord.gg/sWPHCdxCPU">Discord</a></li>
-            </ul>
-            <p class="footer__text">&copy; 2023 Doge Network. All rights reserved.</p>
+         <div class="container" style="text-align: center;">
+            <p class="footer__text">&copy; 2026 ClassHub Network. Focado em Educação.</p>
          </div>
       </footer>
    </body>
