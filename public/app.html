@@ -1,126 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ClassHub | Navegador</title>
+    <title>ClassHub | Pesquisa</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2991/2991165.png">
     
     <style>
-        /* Estilo Base #222 */
+        /* Fundo #222 e Estilo Minimalista */
         body, html {
             height: 100%;
             margin: 0;
             background-color: #222222;
             color: white;
-            font-family: 'Segoe UI', Roboto, sans-serif;
-            overflow: hidden;
-        }
-
-        /* Navbar Moderna */
-        nav {
-            background-color: #1a1a1a;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 2px solid #007bff;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 10px;
-        }
-
-        /* Botões Azuis */
-        .button-6 {
-            background-color: #007bff;
-            border: none;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: 0.3s;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .button-6:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
-        }
-
-        .logo-text {
-            font-size: 20px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* Barra de Busca Centralizada */
-        .main-container {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 80vh;
-            padding: 20px;
+            overflow: hidden;
         }
 
-        .search-box {
+        .container {
+            width: 90%;
+            max-width: 650px;
+            text-align: center;
+            margin-top: -50px; /* Sobe um pouco a barra para o centro visual */
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .logo i {
+            color: #007bff; /* Seu Azul */
+        }
+
+        /* Barra de Busca Pro */
+        .search-form {
             width: 100%;
-            max-width: 600px;
         }
 
         .form__input {
             width: 100%;
-            padding: 15px 25px;
-            border-radius: 30px;
-            border: 2px solid #333;
+            padding: 18px 30px;
+            border-radius: 50px;
+            border: 1px solid #444;
             background: #1a1a1a;
             color: white;
             font-size: 18px;
             outline: none;
-            transition: 0.3s;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
 
         .form__input:focus {
             border-color: #007bff;
-            box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
+            background: #1e1e1e;
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
+        .footer-info {
+            position: absolute;
+            bottom: 30px;
+            color: #555;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
+
     </style>
 </head>
 <body>
 
-<nav id="mytopnav">
-    <div class="logo-text">
-        <i class="fa fa-shield" style="color: #007bff;"></i> ClassHub
+<div class="container">
+    <div class="logo">
+        <i class="fa fa-shield"></i> ClassHub
     </div>
-    <div class="nav-links">
-        <a href="games" class="button-6">Jogos</a>
-        <a href="apps" class="button-6">Apps</a>
-        <a href="https://discord.gg/sua-comunidade" class="button-6"><i class="fa fa-comments"></i></a>
-    </div>
-</nav>
 
-<div class="main-container">
-    <h1>Navegação Privada</h1>
-    <p style="color: #888; margin-bottom: 30px;">Acesse qualquer conteúdo sem restrições escolares.</p>
-    
-    <div class="search-box">
-        <form id="searchbar" action="/go.html" method="POST">
-            <input type="text" name="url" class="form__input" placeholder="Digite a URL ou pesquise no Google..." autocomplete="off">
-        </form>
-    </div>
+    <form id="searchbar" action="/go.html" method="POST" class="search-form">
+        <input type="text" name="url" class="form__input" placeholder="Pesquisar ou digitar URL..." autocomplete="off">
+    </form>
+</div>
+
+<div class="footer-info">
+    Conexão Acadêmica Segura
 </div>
 
 <script src="uv/uv.bundle.js"></script>
